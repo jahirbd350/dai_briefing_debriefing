@@ -1,7 +1,7 @@
 <?php
 //include connection file
 include_once("../config.php");
-include_once('libs/fpdfphp');
+include_once('libs/fpdf.php');
 $bd_no = $_GET['bd_no'];
 $visit_id = $_GET['visit_info_id'];
 

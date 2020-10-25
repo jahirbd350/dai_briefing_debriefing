@@ -19,15 +19,15 @@ if (isset($_POST['btn_update_user_info'])){
     $briefing = new Briefing();
     $message = $briefing->updateUserData();
     //$_SESSION['message'] = $message;
-    //header('Location: new_user.php');
+    //header('Location: manage_users.php');
 }
 
 if (isset($_POST['btn_insert_new_user'])){
     include_once '../Briefing.php';
     $briefing = new Briefing();
     $message = $briefing->insertUserData();
-    //header('Location: new_user.php');
-    $_SESSION['message'] = $message;
+    //header('Location: manage_users.php');
+    //$_SESSION['message'] = $message;
 }
 
 include('header.php');
@@ -35,7 +35,7 @@ include('header.php');
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <h4 class="text-center text-success bg-info">
+        <h4 class="text-center text-warning bg-success">
             <?php if (isset($_SESSION['message'])) {
                 echo $_SESSION['message'];
             };

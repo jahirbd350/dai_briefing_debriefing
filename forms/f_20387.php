@@ -10,11 +10,15 @@ if (!isset($_SESSION['user_id'])) {
     $sql = "SELECT visit_info_id FROM briefing_20387_visit_info WHERE bd_no='$_SESSION[bd_no]' ORDER BY visit_info_id DESC LIMIT 1";
     if (mysqli_query($link, $sql)) {
         $visitData = mysqli_query($link, $sql);
-        $visitData = mysqli_fetch_assoc($visitData);
-        $visitId = $visitData['visit_info_id'];
-        $_SESSION['visitId'] = ++$visitId;
+        if (mysqli_num_rows($visitData)>0){
+            $visitData = mysqli_fetch_assoc($visitData);
+            $visitId = $visitData['visit_info_id'];
+            $_SESSION['visitId'] = ++$visitId;
+        } else {
+            $_SESSION['visitId'] = 1;
+        }
     } else {
-        $_SESSION['visitId'] = 1;
+        die('Visit info id increase query problem : '. mysqli_error($link));
     }
     //Visit id increase code finish
 }

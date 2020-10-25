@@ -40,7 +40,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="new_user.php">Users</a></li>
+                    <li><a href="manage_users.php">Manage Users</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">

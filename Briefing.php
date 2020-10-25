@@ -24,7 +24,7 @@ class Briefing
                     $message = "New User Inserted Successfully!";
                     return $message;
                 } else {
-                    die("inserUserData Query Problem : " . mysqli_error($this->link));
+                    die("insert User Data Query Problem : " . mysqli_error($this->link));
                 }
             }
         } else {
