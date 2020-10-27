@@ -24,6 +24,7 @@ $message='';
     <title>Manage Briefing</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <meta http-equiv="refresh" content="300">
+    <link rel = "icon" href ="../icon.png" type = "image/x-icon">
 </head>
 <body>
 <div class="container-fluid">

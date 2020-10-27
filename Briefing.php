@@ -30,7 +30,6 @@ class Briefing
         } else {
             die('User Check Error : ' . mysqli_error($this->link));
         }
-
     }
 
     public function selectAllUsers(){
